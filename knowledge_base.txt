@@ -1,0 +1,462 @@
+Excel Engineering College – Complete A–Z Information Knowledge Base
+Research-based college information
+ For AI chatbot training
+
+
+
+
+
+
+
+
+
+
+Excel Engineering College
+
+Pallakkapalayam, Komarapalayam, Namakkal District, Tamil Nadu – 637303.
+
+NH-544, Salem Main Road
+
+Official website: Excel Engineering College
+
+
+You can use this information as the knowledge base for your ExcelCollegeBot Python chatbot, built using ChatterBot.
+
+The objective is to help the chatbot answer visitors' questions about:
+- College overview and history.
+- UG and PG courses.
+- Departments and specializations.
+- Admission procedures and eligibility.
+- Fees and scholarships.
+- Hostel and campus facilities.
+- Placements and training.
+- Transportation and location.
+- Contact details and administration.
+- Student activities and support services.
+Important: I have separated institution-level facts from details that need confirmation. Course availability, intake, fees, admission deadlines and placement figures can change every academic year. The chatbot should not invent answers when information is unavailable.
+
+1. College overview
+Information	Details
+Name	Excel Engineering College
+Short name	EEC
+Location	Komarapalayam, Namakkal
+State	Tamil Nadu
+PIN code	637303
+Institution type	Private, self-financing
+Established	2007
+Management	Sri Rengaswamy Educational Trust (SRET)
+Founder	Dr. A. K. Natesan
+University affiliation	Anna University, Chennai
+Approval	AICTE, New Delhi
+Status	Autonomous
+Campus	Approximately 130 acres
+Highway	NH-544
+Official website	excelinstitutions.com
+
+The college was established in 2007 under Sri Rengaswamy Educational Trust. The trust itself was founded in 2001.
+
+The institution aims to provide professional engineering education, practical skills, research opportunities and career development.
+
+Source: 
+Excel College+1
+
+2. Vision and mission
+Vision
+
+To create competitive human resources in the fields of engineering for the benefit of society and to meet global challenges.
+
+Mission and objectives
+- Provide quality technical education.
+- Develop technical and professional skills.
+- Encourage innovation and research.
+- Promote industry-oriented learning.
+- Improve employability.
+- Develop ethical and responsible professionals.
+- Support continuous academic improvement.
+Source: 
+Excel College
+
+3. Courses offered
+The official engineering college website groups its academic programmes into different schools.
+School of Computer Science and Engineering
+
+
+
+
+
+
+
+gnindia.dronacharya.info
+
+
+Course	Level
+B.Tech Artificial Intelligence and Data Science	UG
+B.E. Computer Science and Engineering	UG
+B.E. CSE (Artificial Intelligence and Machine Learning)	UG
+B.Tech Information Technology	UG
+B.Tech Computer Science and Business Systems	UG
+M.E. Computer Science and Engineering	PG
+M.Tech Computer Science and Engineering (Integrated 5 Years)	Integrated
+
+School of Electrical and Communication Engineering
+
+
+
+
+
+
+
+amrita.edu
+
+
+Course	Level
+B.E. Electronics and Communication Engineering	UG
+B.E. Electrical and Electronics Engineering	UG
+B.E. Biomedical Engineering	UG
+M.E. Applied Electronics	PG
+M.E. Biomedical Engineering	PG
+M.E. Embedded Systems Technologies	PG
+M.E. Power Electronics and Drives	PG
+
+School of Civil and Mechanical Sciences
+
+
+
+
+
+
+
+allegiance-educare.in
+
+
+The official programme listing includes:
+- B.E. Aeronautical Engineering.
+- B.E. Civil Engineering.
+- B.E. Mechanical Engineering.
+- M.E. Thermal Engineering.
+Other programme and specialization availability should be checked with the admission office.
+
+Note: These are programmes listed on the official institution website, not a guarantee that every programme has an active intake in the 2026–27 admission cycle. 
+Excel College+2
+
+Additional engineering, technology and management programmes
+The official website also lists the following programmes under other schools:
+School	Programmes
+School of Technology	Agricultural Engineering, Food Technology, Petrochemical Technology
+Safety Engineering	B.E. Safety and Fire Engineering
+Management Studies	MBA, Integrated MBA (5 years), MBA in Innovation, Entrepreneurship and Venture Development
+Computer Applications	MCA
+Architecture	B.Arch, M.Arch
+Research	Ph.D. in CSE, ECE, Mechanical Engineering and Physics
+
+Specialization options: The college also lists Honours and Minor programmes in areas such as AI, Data Science, Cybersecurity, IoT, VLSI, Embedded Systems, Electric Vehicles, Drone Technology, Entrepreneurship and Management.
+
+Excel College
+4. Departments
+For chatbot classification, use these department names:
+1. Aeronautical Engineering
+2. Agricultural Engineering
+3. Artificial Intelligence and Data Science
+4. Artificial Intelligence and Machine Learning
+5. Biomedical Engineering
+6. Civil Engineering
+7. Computer Science and Engineering
+8. Computer Science and Business Systems
+9. Electrical and Electronics Engineering
+10. Electronics and Communication Engineering
+11. Food Technology
+12. Information Technology
+13. Mechanical Engineering
+14. Petrochemical Technology
+15. Safety and Fire Engineering
+16. Science and Humanities
+17. Management Studies
+18. Computer Applications
+19. Architecture
+A visitor asking for a department should be directed to the corresponding academic department page or its department office.
+5. Admission information
+
+
+
+
+
+
+
+tamil.samayam.com
+
+
+TNEA counselling code: 2634
+
+The official website provides separate pages for eligibility, admission procedure and scholarships.
+Undergraduate admission
+For B.E. and B.Tech. programmes, the general Tamil Nadu engineering admission route includes:
+- Completion of Class 12 or equivalent.
+- Mathematics, Physics and Chemistry requirements as applicable to the programme and current regulations.
+- Eligibility based on the prescribed qualifying examination marks.
+- Admission through TNEA counselling for applicable government-quota seats.
+- Management-quota admission subject to applicable rules and availability.
+Postgraduate admission
+For M.E. and M.Tech. programmes, eligibility generally involves a relevant undergraduate engineering degree and the applicable admission requirements.
+
+MBA and MCA admissions have their own qualification requirements.
+Documents generally required
+- Class 10 marksheet.
+- Class 12 marksheet.
+- Transfer Certificate.
+- Community Certificate, if applicable.
+- Aadhaar or other accepted identity proof.
+- Entrance/counselling allotment order, where applicable.
+- Passport-size photographs.
+- Undergraduate degree certificates and mark sheets for PG applicants.
+This is a general document checklist, not an official exhaustive list. Confirm the current admission notice before advising applicants.
+Admission links
+- Official college website
+- Admission enquiry
+- TNEA admission portal
+6. Fees and scholarships
+The college advertises admission with scholarship opportunities.
+
+The exact tuition fee depends on:
+- Course and specialization.
+- Government quota or management quota.
+- Applicable government fee regulations.
+- Scholarship eligibility.
+- Hostel and transport requirements.
+- Academic year.
+Chatbot rule: Never provide an estimated fee as an official fee.
+
+Suggested response:
+
+"Excel Engineering College offers scholarship opportunities for eligible students. Tuition fees and scholarship amounts vary according to the course, admission category and eligibility. Please contact the admission office at +91 99655 23999 for the latest fee details."
+
+Excel College+1
+7. Accreditation and recognition
+Recognition	Information
+AICTE	Approved
+Anna University	Affiliated
+Autonomous status	Granted
+NAAC	A+ grade, 3.26 CGPA reported in institutional documents
+NBA	AERO, CSE, Mechanical and ECE listed in institutional accreditation documents
+UGC	2(f) and 12(B) recognition reported
+
+Accreditation validity periods and current programme-specific status should be verified from the latest official certificates.
+
+Sources: 
+Best Multi Disciplinary Campus+2
+
+8. Campus facilities
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6
+
+
+
+
+
+
+
+
+
+
+
+
+
+The institution's official information describes facilities and services including:
+Facility	Information
+Library	Academic learning and reference resources
+Laboratories	Department-based practical laboratories
+Hostel	On-campus accommodation
+Internet	Campus internet connectivity
+Classrooms	Academic teaching facilities
+Seminar facilities	Seminars, workshops and conferences
+Sports	Student physical and extracurricular activities
+Placement centre	Career and recruitment support
+Language centre	Foreign-language training
+Research facilities	Research and development activities
+Innovation centre	Technology development and incubation
+Transportation	Transport information available through campus enquiry
+
+Hostel
+The college describes on-campus hostel facilities with dedicated wardens and staff.
+
+For visitor enquiries, the chatbot should explain that hostel availability, room types, fees, mess arrangements and admission rules must be confirmed directly with the hostel office.
+Library and laboratories
+The academic environment includes learning resources and department-specific practical training facilities.
+Sports and extracurricular activities
+Students are encouraged to participate in sports, student clubs, technical events, seminars and cultural activities.
+
+Excel College+1
+9. Placement and training
+
+
+
+
+
+
+
+linkedin.com
+
+
+The Placement and Training Cell supports students through:
+- Aptitude training.
+- Logical reasoning.
+- Programming and technical preparation.
+- Communication skills.
+- Resume preparation.
+- Mock interviews.
+- Group discussions.
+- Internship assistance.
+- Industrial visits.
+- Campus recruitment drives.
+- Career guidance.
+- Higher education guidance.
+The college describes recruitment opportunities across IT, core engineering, manufacturing, research, consulting and other sectors.
+
+Important: Do not promise a job, minimum salary or placement percentage. Give the latest official placement statistics only when the relevant batch-wise data has been verified.
+
+Excel College+1
+10. Research, innovation and entrepreneurship
+The institution describes a Centre for Technology Development and Deployment and several innovation-related initiatives:
+- Entrepreneurship Development Cell (EDC).
+- Institute Innovation Council (IIC).
+- Research and Development Cell.
+- Product Design and Development.
+- Idea Initiation and Implementation.
+- Technology Business Incubator (TBI).
+- Industry-Academia Collaboration.
+- Publications, Patents and Copyrights support.
+These initiatives support student projects, research, prototypes, startup development and industry interaction.
+
+Excel College
+11. Foreign language training
+The college describes a Centre for Foreign Languages.
+
+Language training listed includes:
+- German.
+- French.
+- Japanese.
+- Spanish.
+The website also mentions preparation for international proficiency examinations, including:
+- Goethe-Zertifikat.
+- DELF.
+- JLPT.
+This can be useful for students interested in international career opportunities and higher education.
+
+Excel College
+12. Student activities and support services
+The college website lists a range of student-support and institutional committees.
+Cell / Committee	Purpose
+Anti-Ragging Committee	Prevent ragging
+Student Grievance Redressal	Handle student complaints
+Women Empowerment Cell	Support women students
+Internal Compliance Committee	Address relevant institutional complaints
+Anti-Drug Committee	Drug awareness and prevention
+Wellness Committee	Student well-being
+Caste Discrimination Cell	Address discrimination complaints
+Entrepreneurship Development Cell	Promote entrepreneurship
+Career Guidance Cell	Career and higher-study support
+Institute Innovation Council	Innovation activities
+Alumni Association	Alumni engagement
+
+The institution also provides online grievance and feedback links through its website. 
+Excel College+1
+
+13. Administration and important people
+The college's official contact page identifies the following:
+Position	Name
+Chairman	Prof. Dr. A. K. Natesan
+Vice-Chairman	Dr. N. Mathan Karthick
+Principal	Dr. K. Bommanna Raja
+
+The governing body also lists Dr. N. Sengottaian as Director – Technical. 
+Excel College+1
+
+14. Contact information
+Excel Engineering College – Admission and General Enquiries
++91 99655 23999
+
+General / admission enquiry
+
+ Copy
+
++91 99656 41888
+
+Principal's office
+
+ Copy
+
+info@excelcolleges.com
+
+General enquiries
+
+ Copy
+
+admission@excelcolleges.com
+
+Admission enquiries
+
+ Copy
+
+Address
+
+NH-544, Salem Main Road, Sankari West, Pallakkapalayam, Komarapalayam, Namakkal District, Tamil Nadu – 637303.
+ Open Google MapsOfficial contact page 
+
+Excel College+1
+15. Transportation and location
+The college is located on NH-544, the Salem–Coimbatore highway.
+
+Nearby reference points include:
+- Komarapalayam.
+- Sankari.
+- Erode.
+- Salem.
+- Pallakkapalayam.
+Visitors should use the college's official Google Maps directions to locate the campus. Exact bus routes, timings and transport charges should be confirmed with the transport office.
+16. Examination and academic information
+The college provides an examination section and a Controller of Examinations (COE) resource area.
+
+Students can look for:
+- Academic regulations.
+- Curriculum and syllabus.
+- Academic calendar.
+- Examination notifications.
+- Results and examination-related information.
+- Student request forms.
+Official resource: Academic and examination information.
+17. Alumni information
+The college website provides an alumni portal.
+
+Alumni can use the institution's alumni resources for alumni-related engagement and information.
+
+Excel Alumni Portal.
+18. Important links directory
+Resource	Link
+Official website	Open
+About college	Open
+Eligibility	Open
+Admission procedure	Open
+Scholarships	Open
+Contact	Open
+TNEA	Open
+Anna University	Open
+AICTE	Open
+UGC	Open

@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excel Engineering College | Enquiry Assistant</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page-shell">
+
+    <header class="hero">
+
+      <!-- Top navigation -->
+      <nav class="quick-nav">
+        <a
+          class="official-website-btn"
+          href="https://excelinstitutions.com/excel_engg/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Official Website ↗
+        </a>
+
+        <a
+          class="college-logo-link"
+          href="https://excelinstitutions.com/excel_engg/"
+          target="_blank"
+          rel="noopener noreferrer">
+          <img
+            src="{{ url_for('static', filename='images/excel-logo.png') }}"
+            alt="Excel Engineering College Logo"
+            class="college-logo"
+          >
+        </a>
+      </nav>
+      
+
+      <div class="hero-copy">
+        <div class="eyebrow">EXCEL ENGINEERING COLLEGE · AUTONOMOUS</div>
+
+        <h1>
+          Your college questions,<br>
+          <span>answered in one place.</span>
+        </h1>
+
+      </div>
+
+    </header>
+
+    <main class="dashboard">
+
+      <!-- CHAT SECTION -->
+      <section class="chat-card" id="chat" aria-label="College chatbot">
+
+        <div class="chat-header">
+          <div class="bot-mark" aria-hidden="true">✦</div>
+
+          <div class="chat-heading">
+            <h2>Chat with ExcelCollegeBot</h2>
+            <p><span class="status-dot"></span> Ready to answer college questions</p>
+          </div>
+
+          <button class="new-chat" id="newChat" type="button">
+            ↻ <span>New chat</span>
+          </button>
+        </div>
+
+        <div class="chat-messages" id="chatMessages" aria-live="polite">
+          <div class="message-row bot-row">
+            <div class="avatar bot-avatar" aria-hidden="true">E</div>
+
+            <div class="bubble bot-bubble">
+              Hello! Welcome to Excel Engineering College. What would you like to know?
+              <span class="message-time">Just now</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="chat-composer" id="chatForm">
+          <label class="sr-only" for="userInput">Type your question</label>
+
+          <input
+            id="userInput"
+            type="text"
+            placeholder="Type your question here..."
+            autocomplete="off"
+            required
+          >
+
+          <button id="sendButton" type="submit">
+            Send <span aria-hidden="true">↗</span>
+          </button>
+        </form>
+
+        <div class="chat-footnote">
+          Answers are based on the college information available in the offline knowledge base.
+        </div>
+
+      </section>
+
+      <!-- RIGHT SIDEBAR -->
+      <aside class="sidebar">
+
+        <!-- POPULAR QUESTIONS -->
+        <section class="side-card popular-card">
+
+          <div class="side-title">
+            <div>
+              <h2>Popular questions</h2>
+              <p>Select a topic to ask the assistant.</p>
+            </div>
+
+            <span class="sparkle" aria-hidden="true"></span>
+          </div>
+
+          <div class="question-grid">
+
+            <button type="button" data-question="What courses are offered at Excel Engineering College?">
+              Courses offered
+            </button>
+
+            <button type="button" data-question="What is the admission process and eligibility?">
+              Admission process
+            </button>
+
+            <button type="button" data-question="What is the TNEA counselling code?">
+              TNEA code
+            </button>
+
+            <button type="button" data-question="Tell me about hostel facilities.">
+              Hostel facilities
+            </button>
+
+            <button type="button" data-question="Tell me about placements and training.">
+              Placements
+            </button>
+
+            <button type="button" data-question="Where is Excel Engineering College located?">
+              College location
+            </button>
+
+            <button type="button" data-question="What scholarships are available?">
+              Scholarships
+            </button>
+
+            <button type="button" data-question="Give me the college contact details.">
+              Contact details
+            </button>
+
+            <button type="button" data-question="What are the eligibility requirements for admission?">
+              Eligibility criteria
+            </button>
+
+            <button type="button" data-question="What is the fee structure for the courses?">
+              Fee structure
+            </button>
+
+            <button type="button" data-question="Tell me about transportation facilities.">
+              Transportation
+            </button>
+
+            <button type="button" data-question="Tell me about library facilities.">
+              Library facilities
+            </button>
+
+            <button type="button" data-question="What laboratory facilities are available?">
+              Laboratory facilities
+            </button>
+
+            <button type="button" data-question="What sports and extracurricular facilities are available?">
+              Sports facilities
+            </button>
+
+            <button type="button" data-question="Tell me about the college infrastructure.">
+              Infrastructure
+            </button>
+
+            <button type="button" data-question="How can I apply for admission?">
+              How to apply
+            </button>
+
+          </div>
+        </section>
+
+        <!-- COLLEGE CONTACT -->
+        <section class="side-card contact-card" id="contact">
+
+          <h2>College contact</h2>
+
+          <p class="side-description">
+            For official and time-sensitive information, contact the college directly.
+          </p>
+
+          <a class="contact-item" href="tel:+919965523999">
+            <span class="contact-icon">☎</span>
+            <span>
+              <strong>Admission enquiry</strong>
+              <u>+91 99655 23999</u>
+            </span>
+          </a>
+
+          <a class="contact-item" href="mailto:admission@excelcolleges.com">
+            <span class="contact-icon">✉</span>
+            <span>
+              <strong>Email</strong>
+              <u>admission@excelcolleges.com</u>
+            </span>
+          </a>
+
+          <div class="contact-item">
+            <span class="contact-icon">⌖</span>
+            <span>
+              <strong>Address</strong>
+              <small>
+                NH-544, Salem Main Road, Pallakkapalayam, Komarapalayam,
+                Namakkal, Tamil Nadu – 637303
+              </small>
+            </span>
+          </div>
+
+          <a
+            class="contact-item"
+            href="https://excelinstitutions.com/excel_engg/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="contact-icon">↗</span>
+            <span>
+              <strong>Website</strong>
+              <u>Visit official website</u>
+            </span>
+          </a>
+
+          <a
+            class="map-link"
+            href="https://www.google.com/maps/search/?api=1&query=Excel+Engineering+College+Pallakkapalayam"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get directions <span>↗</span>
+          </a>
+
+          <p class="contact-note">
+            Please verify current fees, course intake, deadlines and placement figures with the college.
+          </p>
+
+        </section>
+
+        <div class="sidebar-caption">
+          EXCEL ENGINEERING COLLEGE · ENQUIRY ASSISTANT
+        </div>
+
+      </aside>
+
+    </main>
+
+    <footer class="page-footer">
+      © Excel Engineering College · College Enquiry Assistant
+    </footer>
+
+  </div>
+
+  <script>
+    const chatMessages = document.getElementById("chatMessages");
+    const chatForm = document.getElementById("chatForm");
+    const userInput = document.getElementById("userInput");
+    const sendButton = document.getElementById("sendButton");
+
+    function addMessage(text, sender) {
+      const row = document.createElement("div");
+      row.className = `message-row ${sender === "user" ? "user-row" : "bot-row"}`;
+
+      if (sender !== "user") {
+        const avatar = document.createElement("div");
+        avatar.className = "avatar bot-avatar";
+        avatar.textContent = "E";
+        avatar.setAttribute("aria-hidden", "true");
+        row.appendChild(avatar);
+      }
+
+      const bubble = document.createElement("div");
+      bubble.className = `bubble ${sender === "user" ? "user-bubble" : "bot-bubble"}`;
+
+      const content = document.createElement("div");
+      content.className = "bubble-content";
+      content.textContent = text;
+
+      const time = document.createElement("span");
+      time.className = "message-time";
+      time.textContent = new Date().toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit"
+      });
+
+      bubble.append(content, time);
+      row.appendChild(bubble);
+
+      if (sender === "user") {
+        const avatar = document.createElement("div");
+        avatar.className = "avatar user-avatar";
+        avatar.textContent = "Y";
+        avatar.setAttribute("aria-hidden", "true");
+        row.appendChild(avatar);
+      }
+
+      chatMessages.appendChild(row);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+
+      return row;
+    }
+
+    async function sendMessage(message) {
+      const question = (message || "").trim();
+      if (!question) return;
+
+      addMessage(question, "user");
+
+      userInput.value = "";
+      userInput.focus();
+
+      sendButton.disabled = true;
+      sendButton.textContent = "Thinking…";
+
+      const loadingRow = addMessage(
+        "Searching the college knowledge base…",
+        "bot"
+      );
+
+      loadingRow.querySelector(".bubble-content").classList.add("loading-text");
+
+      try {
+        const response = await fetch(`/get?msg=${encodeURIComponent(question)}`);
+
+        if (!response.ok) {
+          throw new Error(`Server returned ${response.status}`);
+        }
+
+        const answer = await response.text();
+
+        loadingRow.querySelector(".bubble-content").textContent = answer;
+        loadingRow.querySelector(".loading-text")?.classList.remove("loading-text");
+
+      } catch (error) {
+        loadingRow.querySelector(".bubble-content").textContent =
+          "I couldn't connect to the chatbot server. Please make sure Flask is running and try again.";
+
+      } finally {
+        sendButton.disabled = false;
+        sendButton.innerHTML = 'Send <span aria-hidden="true">↗</span>';
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+    }
+
+    chatForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      sendMessage(userInput.value);
+    });
+
+    document.querySelectorAll("[data-question]").forEach((button) => {
+      button.addEventListener("click", () => {
+        sendMessage(button.dataset.question);
+      });
+    });
+
+    document.getElementById("newChat").addEventListener("click", () => {
+      chatMessages.replaceChildren();
+
+      addMessage(
+        "Hello again! What would you like to know about Excel Engineering College?",
+        "bot"
+      );
+
+      userInput.focus();
+    });
+  </script>
+
+</body>
+</html>

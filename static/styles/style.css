@@ -1,0 +1,890 @@
+/* Excel Engineering College chatbot — maroon / warm cream theme */
+:root {
+  --maroon: #68151d;
+  --maroon-dark: #4d0c11;
+  --maroon-light: #842832;
+  --cream: #fbf7f3;
+  --cream-2: #f4e7dd;
+  --ink: #211719;
+  --muted: #887a78;
+  --line: #eadbd2;
+  --white: #fff;
+  --shadow: 0 18px 55px rgba(65, 20, 22, .09);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: "DM Sans", Arial, sans-serif;
+}
+button, input { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+.page-shell { min-height: 100vh; overflow: hidden; }
+.hero {
+  min-height: 330px;
+  padding: 0 max(5vw, 24px) 105px;
+  color: white;
+  background:
+    radial-gradient(ellipse at 80% 0%, rgba(255,255,255,.10), transparent 35%),
+    linear-gradient(112deg, var(--maroon-dark), #79232c 62%, #5b1119);
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -5% -100px -5%;
+  height: 155px;
+  background: var(--cream);
+  border-radius: 50% 50% 0 0 / 34% 34% 0 0;
+}
+.quick-nav {
+  max-width: 1380px;
+  margin: 0 auto;
+  min-height: 66px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+.quick-nav a {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 999px;
+  padding: 9px 16px;
+  font-size: 13px;
+  transition: background .2s, border-color .2s;
+}
+.quick-nav a:hover { background: rgba(255,255,255,.13); border-color: #fff; }
+.hero-copy {
+  max-width: 1380px;
+  margin: 32px auto 0;
+  position: relative;
+  z-index: 1;
+}
+.eyebrow { color: #f1cfc2; font-size: 11px; letter-spacing: .18em; font-weight: 700; }
+.hero h1 {
+  margin: 13px 0 10px;
+  font: 800 clamp(30px, 4vw, 48px)/1.12 "Manrope", sans-serif;
+  letter-spacing: -.04em;
+}
+.hero h1 span { color: #f1d9cb; }
+.hero-copy p { margin: 0; color: rgba(255,255,255,.78); font-size: 15px; }
+.dashboard {
+  width: min(1380px, calc(100% - 48px));
+  margin: -110px auto 0;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1.72fr) minmax(320px, .92fr);
+  gap: 24px;
+  align-items: start;
+}
+.chat-card, .side-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+.chat-card { overflow: hidden; display: flex; flex-direction: column; min-height: 700px; }
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 23px 27px;
+  border-bottom: 1px solid var(--line);
+}
+.bot-mark {
+  width: 43px; height: 43px; flex: 0 0 43px;
+  display: grid; place-items: center;
+  color: white; font-size: 23px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, var(--maroon-light), var(--maroon-dark));
+}
+.chat-heading { min-width: 0; }
+.chat-heading h2, .side-card h2 {
+  font: 800 17px "Manrope", sans-serif;
+  margin: 0 0 4px;
+}
+.chat-heading p { margin: 0; color: var(--muted); font-size: 13px; }
+.status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #37ae78; margin-right: 5px; box-shadow: 0 0 0 3px #e4f5ec; }
+.new-chat {
+  margin-left: auto;
+  border: 0; border-radius: 12px;
+  padding: 12px 16px;
+  color: var(--maroon-dark);
+  background: var(--cream-2);
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.new-chat:hover { background: #eed9ca; }
+.chat-messages {
+  flex: 1;
+  min-height: 430px;
+  max-height: 590px;
+  overflow-y: auto;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: linear-gradient(180deg, #fff 0%, #fffdfb 100%);
+}
+.message-row { display: flex; align-items: flex-end; gap: 10px; max-width: 90%; }
+.user-row { align-self: flex-end; flex-direction: row-reverse; }
+.bot-row { align-self: flex-start; }
+.avatar {
+  width: 34px; height: 34px; flex: 0 0 34px;
+  border-radius: 50%; display: grid; place-items: center;
+  font-weight: 800; font-size: 13px;
+}
+.bot-avatar { background: #f1e2d8; color: var(--maroon); border: 1px solid #e7d1c4; }
+.user-avatar { background: #f4c49f; color: #60301d; }
+.bubble {
+  max-width: 100%;
+  padding: 14px 17px 10px;
+  border-radius: 17px;
+  font-size: 14px;
+  line-height: 1.62;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.bot-bubble {
+  background: #f7f1ed;
+  border: 1px solid #eddfd7;
+  border-bottom-left-radius: 5px;
+}
+.user-bubble {
+  background: var(--maroon);
+  color: #fff;
+  border-bottom-right-radius: 5px;
+}
+.message-time { display: block; margin-top: 5px; font-size: 10px; opacity: .58; text-align: right; }
+.loading-text { color: var(--muted); font-style: italic; }
+.chat-composer {
+  display: flex;
+  gap: 10px;
+  padding: 18px;
+  border-top: 1px solid var(--line);
+  background: #fff;
+}
+.chat-composer input {
+  min-width: 0; flex: 1;
+  border: 1px solid #d9bcb3;
+  border-radius: 14px;
+  padding: 15px 17px;
+  outline: none;
+  color: var(--ink);
+  background: #fff;
+  transition: box-shadow .2s, border-color .2s;
+}
+.chat-composer input:focus { border-color: var(--maroon); box-shadow: 0 0 0 3px rgba(104,21,29,.10); }
+.chat-composer input::placeholder { color: #9b8d89; }
+.chat-composer button {
+  border: 0; border-radius: 13px;
+  background: var(--maroon);
+  color: #fff; font-weight: 700;
+  padding: 0 22px; cursor: pointer;
+  transition: background .2s, transform .2s;
+}
+.chat-composer button:hover { background: var(--maroon-dark); transform: translateY(-1px); }
+.chat-composer button:disabled { opacity: .65; cursor: wait; transform: none; }
+.chat-footnote { padding: 0 22px 15px; color: #a1938e; font-size: 10px; }
+.sidebar { display: flex; flex-direction: column; gap: 18px; }
+.side-card { padding: 23px 24px; }
+.side-title { display: flex; align-items: flex-start; justify-content: space-between; }
+.side-card h2 { font-size: 17px; }
+.side-title p, .side-description { margin: 4px 0 18px; color: var(--muted); font-size: 13px; line-height: 1.55; }
+.sparkle { color: #c49b7d; font-size: 25px; }
+.question-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+.question-grid button {
+  min-height: 45px;
+  border: 1px solid #eadbd2;
+  border-radius: 12px;
+  padding: 10px 12px;
+  text-align: left;
+  color: #3b2928;
+  background: #f8f2ee;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all .2s;
+}
+.question-grid button:hover { border-color: #cda9a0; background: #f2e5dd; color: var(--maroon-dark); transform: translateY(-1px); }
+.contact-card h2 { margin-bottom: 5px; }
+.contact-card .side-description { padding-bottom: 16px; border-bottom: 1px solid var(--line); margin-bottom: 0; }
+.contact-item {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding: 13px 0;
+  color: inherit; text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+.contact-icon {
+  flex: 0 0 34px; width: 34px; height: 34px;
+  display: grid; place-items: center;
+  border-radius: 10px; color: var(--maroon);
+  background: var(--cream-2); font-size: 15px;
+}
+.contact-item strong, .contact-item u, .contact-item small { display: block; }
+.contact-item strong { font-size: 12px; margin: 1px 0 3px; }
+.contact-item u { color: var(--maroon); font-size: 12px; overflow-wrap: anywhere; }
+.contact-item small { font-size: 12px; line-height: 1.55; color: #544746; }
+.map-link {
+  display: flex; justify-content: space-between;
+  margin-top: 14px; padding: 12px 14px;
+  color: var(--maroon); text-decoration: none;
+  border-radius: 11px; background: #f8f1ec;
+  font-size: 12px; font-weight: 700;
+}
+.map-link:hover { background: var(--cream-2); }
+.contact-note { margin: 14px 0 0; color: #988985; font-size: 10px; line-height: 1.5; }
+.sidebar-caption { text-align: center; color: #a9948d; font-size: 9px; letter-spacing: .14em; }
+.page-footer { padding: 30px 20px 22px; text-align: center; color: #9a8983; font-size: 11px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+@media (max-width: 900px) {
+  .dashboard { grid-template-columns: 1fr; width: min(760px, calc(100% - 32px)); margin-top: -95px; }
+  .chat-card { min-height: 620px; }
+  .chat-messages { min-height: 360px; }
+  .sidebar { display: grid; grid-template-columns: 1fr 1fr; align-items: start; }
+  .sidebar-caption { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+  .hero { min-height: 315px; padding: 0 17px 105px; }
+  .quick-nav { overflow-x: auto; min-height: 60px; gap: 7px; scrollbar-width: none; }
+  .quick-nav::-webkit-scrollbar { display: none; }
+  .quick-nav a { flex: 0 0 auto; padding: 8px 12px; font-size: 11px; }
+  .hero-copy { margin-top: 30px; }
+  .hero h1 { font-size: 31px; }
+  .hero-copy p { max-width: 310px; font-size: 13px; line-height: 1.5; }
+  .dashboard { width: calc(100% - 22px); margin-top: -100px; gap: 14px; }
+  .chat-card, .side-card { border-radius: 18px; }
+  .chat-card { min-height: 600px; }
+  .chat-header { padding: 17px 15px; gap: 9px; }
+  .bot-mark { width: 36px; height: 36px; flex-basis: 36px; }
+  .chat-heading h2 { font-size: 14px; }
+  .chat-heading p { font-size: 10px; }
+  .new-chat { padding: 10px 11px; font-size: 11px; }
+  .chat-messages { padding: 17px 12px; min-height: 350px; gap: 14px; }
+  .message-row { max-width: 96%; gap: 7px; }
+  .avatar { width: 28px; height: 28px; flex-basis: 28px; }
+  .bubble { padding: 11px 12px 8px; font-size: 12px; }
+  .chat-composer { padding: 12px; gap: 7px; }
+  .chat-composer input { padding: 13px 11px; font-size: 12px; }
+  .chat-composer button { padding: 0 14px; font-size: 12px; }
+  .chat-footnote { padding: 0 13px 13px; font-size: 9px; }
+  .sidebar { display: flex; }
+  .side-card { padding: 19px 17px; }
+  .question-grid { gap: 7px; }
+  .question-grid button { min-height: 43px; padding: 9px; font-size: 11px; }
+}
+
+/* =========================================
+   EXCEL ENGINEERING COLLEGE
+   BLUE & WHITE BRAND THEME
+========================================= */
+
+:root {
+  --maroon: #302F9B;
+  --maroon-dark: #242477;
+  --maroon-light: #4544B8;
+
+  --cream: #F5F7FF;
+  --cream-2: #E9ECFF;
+
+  --ink: #171936;
+  --muted: #737895;
+  --line: #DFE3F5;
+  --white: #FFFFFF;
+
+  --shadow: 0 18px 55px rgba(48, 47, 155, .09);
+}
+
+/* Main page */
+body {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.page-shell {
+  background: var(--cream);
+}
+
+/* Hero section */
+.hero {
+  background:
+    radial-gradient(ellipse at 80% 0%, rgba(255,255,255,.17), transparent 35%),
+    linear-gradient(115deg, #242477, #302F9B 60%, #4544B8);
+}
+
+.hero::after {
+  background: var(--cream);
+}
+
+.eyebrow {
+  color: #DDE2FF;
+}
+
+.hero h1 span {
+  color: #DDE2FF;
+}
+
+/* Top navigation */
+.quick-nav {
+  justify-content: space-between;
+  min-height: 82px;
+  gap: 18px;
+}
+
+.quick-nav .official-website-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 21px;
+  border: 1px solid rgba(255,255,255,.65);
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #302F9B;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all .25s ease;
+}
+
+.quick-nav .official-website-btn:hover {
+  background: #E9ECFF;
+  color: #242477;
+  transform: translateY(-2px);
+  border-color: #FFFFFF;
+}
+
+.quick-nav .college-logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  padding: 5px 12px;
+  border: none;
+  background: #FFFFFF;
+  border-radius: 12px;
+}
+
+.quick-nav .college-logo-link:hover {
+  background: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.college-logo {
+  display: block;
+  width: 180px;
+  height: 58px;
+  object-fit: contain;
+}
+
+/* Chat header */
+.chat-header {
+  border-bottom-color: var(--line);
+}
+
+.bot-mark {
+  background: linear-gradient(145deg, #4544B8, #242477);
+}
+
+.new-chat {
+  color: #302F9B;
+  background: #E9ECFF;
+}
+
+.new-chat:hover {
+  background: #DDE2FF;
+}
+
+/* Chat messages */
+.chat-messages {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F9FAFF 100%);
+}
+
+.bot-avatar {
+  background: #E9ECFF;
+  color: #302F9B;
+  border-color: #D9DEFF;
+}
+
+.user-avatar {
+  background: #DDE2FF;
+  color: #302F9B;
+}
+
+.bot-bubble {
+  background: #F3F5FF;
+  border-color: #E0E4FA;
+}
+
+.user-bubble {
+  background: #302F9B;
+  color: #FFFFFF;
+}
+
+/* Chat input */
+.chat-composer {
+  border-top-color: var(--line);
+}
+
+.chat-composer input {
+  border-color: #D7DCF3;
+}
+
+.chat-composer input:focus {
+  border-color: #302F9B;
+  box-shadow: 0 0 0 3px rgba(48,47,155,.12);
+}
+
+.chat-composer button {
+  background: #302F9B;
+  color: #FFFFFF;
+}
+
+.chat-composer button:hover {
+  background: #242477;
+}
+
+/* Popular questions */
+.question-grid button {
+  color: #27275F;
+  background: #F3F5FF;
+  border-color: #DDE2F5;
+  min-height: 48px;
+  border-radius: 11px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all .2s ease;
+}
+
+.question-grid button:hover {
+  background: #302F9B;
+  border-color: #302F9B;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(48,47,155,.14);
+}
+
+.question-grid button:focus-visible,
+.quick-nav a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #8E9BFF;
+  outline-offset: 3px;
+}
+
+/* Sidebar and cards */
+.chat-card,
+.side-card {
+  border-color: var(--line);
+  box-shadow: var(--shadow);
+}
+
+.sparkle {
+  color: #4544B8;
+}
+
+.contact-card .side-description {
+  border-bottom-color: var(--line);
+}
+
+.contact-item {
+  border-bottom-color: var(--line);
+}
+
+.contact-icon {
+  color: #302F9B;
+  background: #E9ECFF;
+}
+
+.contact-item u {
+  color: #302F9B;
+}
+
+.map-link {
+  color: #302F9B;
+  background: #F0F2FF;
+}
+
+.map-link:hover {
+  background: #E2E6FF;
+}
+
+/* Footer */
+.page-footer {
+  color: #737895;
+}
+
+.sidebar-caption {
+  color: #737895;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .quick-nav {
+    min-height: 76px;
+  }
+
+  .college-logo {
+    width: 150px;
+    height: 50px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 0;
+  }
+
+  .quick-nav {
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    overflow: visible;
+  }
+
+  .quick-nav .official-website-btn {
+    padding: 10px 12px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .quick-nav .college-logo-link {
+    padding: 4px 7px;
+  }
+
+  .college-logo {
+    width: 112px;
+    height: 43px;
+  }
+
+  .hero-copy {
+    margin-top: 25px;
+  }
+
+  .question-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .question-grid button {
+    min-height: 46px;
+    padding: 9px 8px;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+}
+
+@media (max-width: 360px) {
+  .quick-nav .official-website-btn {
+    font-size: 10px;
+    padding: 9px;
+  }
+
+  .college-logo {
+    width: 95px;
+    height: 38px;
+  }
+}
+
+/* LARGE EXCEL COLLEGE LOGO */
+.quick-nav .college-logo-link {
+    width: 310px;
+    height: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    margin-left: auto;
+    background: #FFFFFF;
+    border-radius: 18px;
+    border: 2px solid rgba(255,255,255,0.9);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.college-logo {
+    width: 100%;
+    height: 100%;
+    max-width: 280px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .quick-nav .college-logo-link {
+        width: 230px;
+        height: 90px;
+    }
+
+    .college-logo {
+        max-width: 210px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .quick-nav .college-logo-link {
+        width: 155px;
+        height: 68px;
+        padding: 7px 10px;
+        border-radius: 13px;
+    }
+
+    .college-logo {
+        max-width: 140px;
+    }
+}
+
+/* College building as a subtle hero background */
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    background:
+        linear-gradient(
+            110deg,
+            rgba(36, 36, 119, 0.94),
+            rgba(48, 47, 155, 0.88)
+        ),
+        url("/static/images/college-front.jpg");
+
+    background-size: cover;
+    background-position: center 45%;
+    background-repeat: no-repeat;
+}
+
+/* Keep hero content above the background */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(35, 36, 120, 0.12);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Preserve the curved lower edge */
+.hero::after {
+    z-index: 0;
+}
+
+/* Keep navigation and heading visible */
+.quick-nav,
+.hero-copy {
+    position: relative;
+    z-index: 1;
+}
+/* Prevent unwanted list numbering in chatbot answers */
+.bubble-content ol {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.bubble-content ul {
+    padding-left: 20px;
+}
+
+.bubble-content li {
+    list-style: none;
+}
+/* ===== ORANGE THEME ===== */
+
+:root {
+    --maroon: #F07824;
+    --maroon-dark: #C95712;
+    --maroon-light: #FF984D;
+
+    --cream: #FFF9F3;
+    --cream-dark: #FFF0E3;
+
+    --ink: #242424;
+    --muted: #77716B;
+}
+
+/* Hero background */
+.hero {
+    background:
+        linear-gradient(
+            110deg,
+            rgba(153, 65, 12, 0.94),
+            rgba(240, 120, 36, 0.88)
+        ),
+        url("/static/images/college-front.jpg");
+
+    background-size: cover;
+    background-position: center 45%;
+}
+
+/* Main buttons */
+button,
+.quick-question,
+.popular-question {
+    transition: all 0.25s ease;
+}
+
+.quick-question:hover,
+.popular-question:hover {
+    background: #F07824;
+    color: #ffffff;
+    border-color: #F07824;
+}
+
+/* Chat header icon */
+.chat-icon,
+.bot-icon {
+    background: #F07824;
+}
+
+/* User message */
+.user-message,
+.message.user {
+    background: #C95712;
+    color: #ffffff;
+}
+
+/* Chatbot message */
+.bot-message,
+.message.bot {
+    background: #FFF0E3;
+}
+
+/* Selected popular question */
+.popular-question.active,
+.quick-question.active {
+    background: #C95712;
+    color: #ffffff;
+}
+
+:root {
+    --maroon: #FF6E08;
+    --maroon-dark: #D95700;
+    --maroon-light: #FF914D;
+
+    --cream: #FFF9F3;
+    --cream-dark: #FFF0E3;
+
+    --ink: #242424;
+    --muted: #77716B;
+}
+
+/* Hero background */
+.hero {
+    background:
+        linear-gradient(
+            110deg,
+            rgba(180, 70, 0, 0.94),
+            rgba(255, 110, 8, 0.88)
+        ),
+        url("/static/images/college-front.jpg");
+
+    background-size: cover;
+    background-position: center 45%;
+}
+
+/* Remove white logo container */
+.college-logo {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+/* REMOVE WHITE LOGO CONTAINER */
+.college-logo,
+.college-logo-container,
+.logo-container {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+}
+
+/* KEEP LOGO TRANSPARENT */
+.college-logo img,
+img.college-logo {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* REMOVE GEMINI / SPARKLE ICON */
+.popular-questions .sparkle-icon,
+.popular-questions .gemini-icon,
+.popular-questions-header .sparkle-icon,
+.popular-questions-header .gemini-icon {
+    display: none !important;
+}
+/* Remove the white box behind the Excel logo */
+.college-logo,
+.college-logo-container,
+.logo-container,
+.header-logo,
+.college-brand {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+}
+
+/* Remove white background from logo and its parent link */
+a.college-logo-link {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Transparent Excel logo */
+img.college-logo {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    display: block;
+    object-fit: contain;
+}
+/* Excel logo at top right */
+.college-logo-link {
+    position: absolute;
+    top: 15px;
+    right: 5%;
+    width: 350px;
+    z-index: 20;
+    background: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.college-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+    .college-logo-link {
+        width: 155px;
+        right: 15px;
+        top: 10px;
+    }
+}

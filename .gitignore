@@ -1,0 +1,24 @@
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+# Virtual environments
+venv/
+bin/
+pyvenv.cfg/
+
+# Local database
+database.sqlite3
+
+# Python cache
+__pycache__/
+*.pyc
